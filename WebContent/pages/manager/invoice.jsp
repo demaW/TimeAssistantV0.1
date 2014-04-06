@@ -227,7 +227,7 @@
     <br/><br/>
     <input class="btn btn-primary" type="button" value="Print" name="pr" title="Print" onClick="window.print();">
 </div>
->>>>>>> 49dc31138aa78094f07b82ca218bf38f24271542
+
 
 </body>
 </html>

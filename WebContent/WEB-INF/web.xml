@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.java.task11.webapp.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/pages/admin/*</url-pattern>
+        <url-pattern>/pages/manager/*</url-pattern>
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/manager/*</url-pattern>
+    </filter-mapping>
+
+    <!--CharsetFilter start-->
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>com.java.task11.webapp.filter.CharsetFilter</filter-class>
+        <init-param>
+            <param-name>requestEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
+    <resource-ref>
+        <res-ref-name>jdbc/db</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/pages/errorPage.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+<<<<<<< 03de9564aa2a01ee2979b0c85fa2546ee15f6065
+        <location>/pages/error404Page.jsp</location>
+    </error-page>
+
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+
+=======
+            <location>/pages/error404Page.jsp</location>
+    </error-page>
+    
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+>>>>>>> 49dc31138aa78094f07b82ca218bf38f24271542
+</web-app>

@@ -24,41 +24,18 @@ import com.java.task11.model.UserRole;
 @WebServlet("/admin/users")
 public class OutEmployees extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-<<<<<<< 03de9564aa2a01ee2979b0c85fa2546ee15f6065
 	private static Logger log = Logger.getLogger(OutEmployees.class);
-=======
-	private static Logger log = Logger.getLogger(OutEmployees.class);      
     /**
      * @see HttpServlet#HttpServlet()
      */
     public OutEmployees() {
         super();
     }
->>>>>>> 49dc31138aa78094f07b82ca218bf38f24271542
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-<<<<<<< 03de9564aa2a01ee2979b0c85fa2546ee15f6065
-	public OutEmployees() {
-		super();
-=======
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	List<User> users = null;
-	List<UserRole> roles = null;
-	try {
-		users = new UserService().getListOfObjects();
-		roles = new RoleService().getListOfObjects();
-	} catch (DAOException e) {
-		log.error(e);
-		e.printStackTrace();
->>>>>>> 49dc31138aa78094f07b82ca218bf38f24271542
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		List<User> users = null;

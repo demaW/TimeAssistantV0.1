@@ -19,10 +19,7 @@ import com.java.task11.model.User;
 public class UserEditProfile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger(UserEditProfile.class);
-<<<<<<< 03de9564aa2a01ee2979b0c85fa2546ee15f6065
 
-=======
->>>>>>> 49dc31138aa78094f07b82ca218bf38f24271542
 	public UserEditProfile() {
 		super();
 	}
